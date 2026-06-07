@@ -317,8 +317,12 @@ public final class TerminalView extends View {
                 // However, this is not a valid value as per AOSP since `InputType.TYPE_CLASS_*` is
                 // not set and it logs a warning:
                 // W/InputAttributes: Unexpected input class: inputType=0x00080090 imeOptions=0x02000000
-                // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r40:packages/inputmethods/LatinIME/java/src/com/android/inputmethod/latin/InputAttributes.java;l=79
-                outAttrs.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
+                // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r40:packages/inputmethods/latinime/java/src/com/android/inputmethod/latin/InputAttributes.java;l=79
+                if (mClient.shouldUseVisiblePasswordInputType()) {
+                    outAttrs.inputType = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
+                } else {
+                    outAttrs.inputType = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
+                }
             } else {
                 // Using InputType.NULL is the most correct input type and avoids issues with other hacks.
                 //

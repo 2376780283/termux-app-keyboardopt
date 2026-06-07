@@ -16,6 +16,19 @@
             app:summaryOn="@string/termux_soft_keyboard_enabled_only_if_no_hardware_on"
             app:title="@string/termux_soft_keyboard_enabled_only_if_no_hardware_title" />
 
+        <SwitchPreferenceCompat
+            app:key="enforce_char_based_input"
+            app:summaryOff="@string/termux_enforce_char_based_input_off"
+            app:summaryOn="@string/termux_enforce_char_based_input_on"
+            app:title="@string/termux_enforce_char_based_input_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="enforce_char_based_input"
+            app:key="enforce_char_based_input_type_password"
+            app:summaryOff="@string/termux_enforce_char_based_input_type_password_off"
+            app:summaryOn="@string/termux_enforce_char_based_input_type_password_on"
+            app:title="@string/termux_enforce_char_based_input_type_password_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

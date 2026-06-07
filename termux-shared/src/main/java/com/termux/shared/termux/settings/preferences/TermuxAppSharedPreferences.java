@@ -234,6 +234,24 @@ public class TermuxAppSharedPreferences extends AppSharedPreferences {
 
 
 
+    public boolean isEnforcingCharBasedInput() {
+        return SharedPreferenceUtils.getBoolean(mSharedPreferences, TERMUX_APP.KEY_ENFORCE_CHAR_BASED_INPUT, TERMUX_APP.DEFAULT_VALUE_ENFORCE_CHAR_BASED_INPUT);
+    }
+
+    public void setEnforceCharBasedInput(boolean value) {
+        SharedPreferenceUtils.setBoolean(mSharedPreferences, TERMUX_APP.KEY_ENFORCE_CHAR_BASED_INPUT, value, false);
+    }
+
+    public boolean isEnforcingCharBasedInputTypePassword() {
+        return SharedPreferenceUtils.getBoolean(mSharedPreferences, TERMUX_APP.KEY_ENFORCE_CHAR_BASED_INPUT_TYPE_PASSWORD, TERMUX_APP.DEFAULT_VALUE_ENFORCE_CHAR_BASED_INPUT_TYPE_PASSWORD);
+    }
+
+    public void setEnforceCharBasedInputTypePassword(boolean value) {
+        SharedPreferenceUtils.setBoolean(mSharedPreferences, TERMUX_APP.KEY_ENFORCE_CHAR_BASED_INPUT_TYPE_PASSWORD, value, false);
+    }
+
+
+
     public boolean arePluginErrorNotificationsEnabled(boolean readFromFile) {
         if (readFromFile)
             return SharedPreferenceUtils.getBoolean(mMultiProcessSharedPreferences, TERMUX_APP.KEY_PLUGIN_ERROR_NOTIFICATIONS_ENABLED, TERMUX_APP.DEFAULT_VALUE_PLUGIN_ERROR_NOTIFICATIONS_ENABLED);

@@ -169,6 +169,18 @@ public final class TermuxPreferenceConstants {
         public static final boolean DEFAULT_VALUE_TERMINAL_VIEW_KEY_LOGGING_ENABLED = false;
 
         /**
+         * Defines the key for whether to enforce character based input to fix the issue where for some devices like Samsung, the letters might not appear until enter is pressed.
+         */
+        public static final String KEY_ENFORCE_CHAR_BASED_INPUT = "enforce_char_based_input";
+        public static final boolean DEFAULT_VALUE_ENFORCE_CHAR_BASED_INPUT = false;
+
+        /**
+         * Defines the key for whether to use TYPE_TEXT_VARIATION_VISIBLE_PASSWORD for input type instead of TYPE_CLASS_TEXT when enforce_char_based_input is enabled.
+         */
+        public static final String KEY_ENFORCE_CHAR_BASED_INPUT_TYPE_PASSWORD = "enforce_char_based_input_type_password";
+        public static final boolean DEFAULT_VALUE_ENFORCE_CHAR_BASED_INPUT_TYPE_PASSWORD = false;
+
+        /**
          * Defines the key for whether flashes and notifications for plugin errors are enabled or not.
          */
         public static final String KEY_PLUGIN_ERROR_NOTIFICATIONS_ENABLED = "plugin_error_notifications_enabled";

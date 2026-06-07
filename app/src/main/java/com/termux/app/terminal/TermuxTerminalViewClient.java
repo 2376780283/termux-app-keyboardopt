@@ -213,7 +213,12 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
 
     @Override
     public boolean shouldEnforceCharBasedInput() {
-        return mActivity.getProperties().isEnforcingCharBasedInput();
+        return mActivity.getProperties().isEnforcingCharBasedInput() || mActivity.getPreferences().isEnforcingCharBasedInput();
+    }
+
+    @Override
+    public boolean shouldUseVisiblePasswordInputType() {
+        return mActivity.getPreferences().isEnforcingCharBasedInputTypePassword();
     }
 
     @Override

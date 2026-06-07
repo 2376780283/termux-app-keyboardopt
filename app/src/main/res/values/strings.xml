@@ -188,6 +188,18 @@
                 <string name="termux_soft_keyboard_enabled_only_if_no_hardware_on">Soft keyboard will be enabled only if
                     no hardware keyboard is connected.</string>
 
+                <!-- Enforce Char Based Input -->
+                <string name="termux_enforce_char_based_input_title">Enforce Char Based Input</string>
+                <string name="termux_enforce_char_based_input_off">Enforce char based input will be disabled. (Default)</string>
+                <string name="termux_enforce_char_based_input_on">Enforce char based input will be enabled.
+                    Try this if characters do not appear in terminal until enter is pressed, commonly on Samsung devices.</string>
+
+                <!-- Enforce Char Based Input Type Password -->
+                <string name="termux_enforce_char_based_input_type_password_title">Use Visible Password Input Type</string>
+                <string name="termux_enforce_char_based_input_type_password_off">Input type will be TYPE_CLASS_TEXT. (Default)</string>
+                <string name="termux_enforce_char_based_input_type_password_on">Input type will be TYPE_TEXT_VARIATION_VISIBLE_PASSWORD.
+                    This may help some keyboards with suggestions issues.</string>
+
 
         <!-- Terminal View Preferences -->
         <string name="termux_terminal_view_preferences_title">Terminal View</string>

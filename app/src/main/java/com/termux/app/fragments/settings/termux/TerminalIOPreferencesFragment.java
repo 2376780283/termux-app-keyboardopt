@@ -60,6 +60,12 @@ class TerminalIOPreferencesDataStore extends PreferenceDataStore {
             case "soft_keyboard_enabled_only_if_no_hardware":
                 mPreferences.setSoftKeyboardEnabledOnlyIfNoHardware(value);
                 break;
+            case "enforce_char_based_input":
+                mPreferences.setEnforceCharBasedInput(value);
+                break;
+            case "enforce_char_based_input_type_password":
+                mPreferences.setEnforceCharBasedInputTypePassword(value);
+                break;
             default:
                 break;
         }
@@ -74,6 +80,10 @@ class TerminalIOPreferencesDataStore extends PreferenceDataStore {
                 return mPreferences.isSoftKeyboardEnabled();
             case "soft_keyboard_enabled_only_if_no_hardware":
                 return mPreferences.isSoftKeyboardEnabledOnlyIfNoHardware();
+            case "enforce_char_based_input":
+                return mPreferences.isEnforcingCharBasedInput();
+            case "enforce_char_based_input_type_password":
+                return mPreferences.isEnforcingCharBasedInputTypePassword();
             default:
                 return false;
         }
