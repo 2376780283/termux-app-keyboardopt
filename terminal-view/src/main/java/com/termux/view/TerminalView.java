@@ -321,7 +321,7 @@ public final class TerminalView extends View {
                 if (mClient.shouldUseVisiblePasswordInputType()) {
                     outAttrs.inputType = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
                 } else {
-                    outAttrs.inputType = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
+                    outAttrs.inputType = InputType.TYPE_CLASS_TEXT;
                 }
             } else {
                 // Using InputType.NULL is the most correct input type and avoids issues with other hacks.
